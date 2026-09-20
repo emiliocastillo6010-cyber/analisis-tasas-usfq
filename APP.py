@@ -185,7 +185,7 @@ def crear_pdf():
     dibujar_tabla_pdf(pdf, "Banco FoundVision", "AA+", "FV")
     dibujar_tabla_pdf(pdf, "Cooperativa 29 de Octubre", "AA", "Coop29")
 
-       pdf.set_font("helvetica", 'B', 10)
+    pdf.set_font("helvetica", 'B', 10)
     pdf.cell(w=0, h=6, text="Enlaces a Documentación de Respaldo:", new_x="LMARGIN", new_y="NEXT")
     pdf.set_font("helvetica", '', 9)
     pdf.cell(w=0, h=6, text="1. Tarifario FoundVision: https://visionfund.ec/docs/transparencia/tarifario-septiembre.pdf", new_x="LMARGIN", new_y="NEXT")
