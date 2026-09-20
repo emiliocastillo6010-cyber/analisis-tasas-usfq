@@ -25,7 +25,7 @@ inflacion_esperada = 0.029
 plazos = [31, 61, 91, 121, 181, 271, 361]
 
 # Tasas de Banco Guayaquil extraídas del PDF
-tasas_bg = [0.039, 0.040, 0.0405, 0.0405, 0.041, 0.0415,0.0420]
+tasas_bg = [0.038, 0.039, 0.04, 0.0405, 0.041, 0.0415,0.0420]
 
 # Tasas de Cooperativa 29 de Octubre extraídas del PDF
 tasas_coop29 = [0.0355, 0.0375, 0.0405, 0.0425, 0.0455, 0.0495, 0.0565]
