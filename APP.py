@@ -59,7 +59,7 @@ with col_tabla1:
     
     # ESPACIO PARA LINKS BANCO FOUNDVISION
     st.markdown("https://visionfund.ec/docs/transparencia/calificaciondeactivosmarzojunio2026.pdf") 
-    st.markdown("https://visionfund.ec/docs/transparencia/tarifario-septiembre.pdf)")
+    st.markdown("https://visionfund.ec/docs/transparencia/tarifario-septiembre.pdf")
 
 with col_tabla2:
     st.markdown("### Cooperativa 29 de Octubre")
@@ -71,8 +71,8 @@ with col_tabla2:
     }), use_container_width=True, hide_index=True)
     
     # ESPACIO PARA LINKS COOPERATIVA
-    st.markdown("[Ver Tarifario Oficial de Cooperativa 29 de Octubre (PDF)](#)")
-    st.markdown("[Ver Certificado de Calificación AA](#)")
+    st.markdown("https://www.29deoctubre.fin.ec/Portals/0/Documentos/Transparencia-de-la-Informacion/certificado-calificacion-2.pdf")
+    st.markdown("https://www.29deoctubre.fin.ec/Portals/0/Documentos/TASAS_VIGENTES_7_SEPT_2026.pdf")
 
 st.markdown("---")
 
