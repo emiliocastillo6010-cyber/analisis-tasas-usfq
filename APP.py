@@ -50,7 +50,7 @@ col_tabla1, col_tabla2 = st.columns(2)
 
 with col_tabla1:
     st.markdown("### Banco FoundVision")
-    st.markdown("**Calificación de Riesgo:** AA+ | **Monto mínimo:** USD 5.001")
+    st.markdown("**Calificación de Riesgo:** AA+ | **Monto mínimo:** USD 300")
     df_show_fv = df[['Plazo', 'Tasa_Anual_FV', 'Rend_Nominal_FV', 'Inflacion_Plazo', 'Rend_Real_FV', 'Ganancia_Real_USD_FV']].copy()
     st.dataframe(df_show_fv.style.format({
         'Tasa_Anual_FV': '{:.2%}', 'Rend_Nominal_FV': '{:.3%}', 'Inflacion_Plazo': '{:.3%}', 
