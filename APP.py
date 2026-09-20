@@ -22,7 +22,7 @@ st.markdown("---")
 inversion_inicial = 10000
 inflacion_esperada = 0.029
 
-plazos = [31, 61, 91, 121, 181, 271, 365]
+plazos = [31, 61, 91, 121, 181, 271, 361]
 
 # Tasas de Banco Guayaquil extraídas del PDF
 tasas_bg = [0.039, 0.040, 0.0405, 0.0405, 0.041, 0.0415,0.0420]
