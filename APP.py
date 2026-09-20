@@ -59,7 +59,7 @@ with col_tabla1:
     
     # ESPACIO PARA LINKS BANCO FOUNDVISION
     st.markdown("https://visionfund.ec/docs/transparencia/calificaciondeactivosmarzojunio2026.pdf") 
-    st.markdown("[Ver Certificado de Calificación AA+](#)")
+    st.markdown("https://visionfund.ec/docs/transparencia/tarifario-septiembre.pdf)")
 
 with col_tabla2:
     st.markdown("### Cooperativa 29 de Octubre")
