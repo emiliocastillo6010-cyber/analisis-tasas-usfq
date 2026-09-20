@@ -185,7 +185,14 @@ def crear_pdf():
     dibujar_tabla_pdf(pdf, "Banco FoundVision", "AA+", "FV")
     dibujar_tabla_pdf(pdf, "Cooperativa 29 de Octubre", "AA", "Coop29")
 
-    
+       pdf.set_font("helvetica", 'B', 10)
+    pdf.cell(w=0, h=6, text="Enlaces a Documentación de Respaldo:", new_x="LMARGIN", new_y="NEXT")
+    pdf.set_font("helvetica", '', 9)
+    pdf.cell(w=0, h=6, text="1. Tarifario FoundVision: https://visionfund.ec/docs/transparencia/tarifario-septiembre.pdf", new_x="LMARGIN", new_y="NEXT")
+    pdf.cell(w=0, h=6, text="2. Tarifario Coop 29 Oct: https://www.29deoctubre.fin.ec/Portals/0/Documentos/TASAS_VIGENTES_7_SEPT_2026.pdf", new_x="LMARGIN", new_y="NEXT")
+    pdf.cell(w=0, h=6, text="3. Calificadoras de Riesgo: ", new_x="LMARGIN", new_y="NEXT")
+    pdf.cell(w=0, h=6, text="3. Calificadoras de Riesgo: ", new_x="LMARGIN", new_y="NEXT")
+    pdf.ln(5)
 
     # Gráficas
     with tempfile.TemporaryDirectory() as tmpdir:
@@ -199,20 +206,13 @@ def crear_pdf():
         fig3.write_image(fig3_path, width=800, height=400, scale=2)
         
         pdf.add_page()
-        pdf.image(fig1_path, x=15, w=180)
+        pdf.image(fig1_path, x=15, w=190)
         pdf.ln(2)
-        pdf.image(fig2_path, x=15, w=180)
+        pdf.image(fig2_path, x=15, w=190)
         pdf.add_page()
-        pdf.image(fig3_path, x=15, w=180)
+        pdf.image(fig3_path, x=15, w=190)
 
-       pdf.set_font("helvetica", 'B', 10)
-    pdf.cell(w=0, h=6, text="Enlaces a Documentación de Respaldo:", new_x="LMARGIN", new_y="NEXT")
-    pdf.set_font("helvetica", '', 9)
-    pdf.cell(w=0, h=6, text="1. Tarifario FoundVision: https://visionfund.ec/docs/transparencia/tarifario-septiembre.pdf", new_x="LMARGIN", new_y="NEXT")
-    pdf.cell(w=0, h=6, text="2. Tarifario Coop 29 Oct: https://www.29deoctubre.fin.ec/Portals/0/Documentos/TASAS_VIGENTES_7_SEPT_2026.pdf", new_x="LMARGIN", new_y="NEXT")
-    pdf.cell(w=0, h=6, text="3. Calificadoras de Riesgo: ", new_x="LMARGIN", new_y="NEXT")
-    pdf.cell(w=0, h=6, text="3. Calificadoras de Riesgo: ", new_x="LMARGIN", new_y="NEXT")
-    pdf.ln(5)
+    
     pdf.ln(5)
     
     # Texto Analítico
