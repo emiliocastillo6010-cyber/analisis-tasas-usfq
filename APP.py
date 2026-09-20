@@ -20,7 +20,7 @@ st.markdown("---")
 
 # 2. Procesamiento de Datos
 inversion_inicial = 10000
-inflacion_esperada = 0.02
+inflacion_esperada = 0.029
 
 plazos = [31, 61, 91, 121, 181, 271, 365]
 
