@@ -198,7 +198,6 @@ def crear_pdf():
             pdf.set_font("helvetica", '', 10)
             pdf.multi_cell(w=180, h=5, text=linea_limpia, new_x="LMARGIN", new_y="NEXT")
             
-    return bytes(pdf.output())
     
     # Tablas
     dibujar_tabla_pdf(pdf, "Banco FoundVision", "AA+", "FV")
@@ -236,6 +235,8 @@ def crear_pdf():
     pdf.cell(w=0, h=6, text="3. Calificadoras de Riesgo: https://visionfund.ec/docs/transparencia/calificaciondeactivosmarzojunio2026.pdf ", new_x="LMARGIN", new_y="NEXT")
     pdf.cell(w=0, h=6, text="3. Calificadoras de Riesgo: https://www.29deoctubre.fin.ec/Portals/0/Documentos/Transparencia-de-la-Informacion/certificado-calificacion-2.pdf ", new_x="LMARGIN", new_y="NEXT")
     pdf.ln(5)
+
+    return bytes(pdf.output())
 
 st.markdown("---")
 pdf_bytes = crear_pdf()
