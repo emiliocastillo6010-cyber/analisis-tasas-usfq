@@ -58,7 +58,7 @@ with col_tabla1:
     }), use_container_width=True, hide_index=True)
     
     # ESPACIO PARA LINKS BANCO FOUNDVISION
-    st.markdown("[Ver Tarifario Oficial de Banco FoundVision (PDF)](#)") 
+    st.markdown("https://visionfund.ec/docs/transparencia/calificaciondeactivosmarzojunio2026.pdf") 
     st.markdown("[Ver Certificado de Calificación AA+](#)")
 
 with col_tabla2:
