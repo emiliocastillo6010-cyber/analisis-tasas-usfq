@@ -217,11 +217,11 @@ def crear_pdf():
         fig3.write_image(fig3_path, width=800, height=400, scale=2)
         
         pdf.add_page()
-        pdf.image(fig1_path, x=15, w=190)
+        pdf.image(fig1_path, x=15, w=170)
         pdf.ln(2)
-        pdf.image(fig2_path, x=15, w=190)
+        pdf.image(fig2_path, x=15, w=170)
         pdf.add_page()
-        pdf.image(fig3_path, x=15, w=190)
+        pdf.image(fig3_path, x=15, w=170)
 
     
     pdf.ln(5)
