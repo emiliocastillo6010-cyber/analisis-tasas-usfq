@@ -185,14 +185,7 @@ def crear_pdf():
     dibujar_tabla_pdf(pdf, "Banco FoundVision", "AA+", "FV")
     dibujar_tabla_pdf(pdf, "Cooperativa 29 de Octubre", "AA", "Coop29")
 
-    # Links en PDF (Dejar como texto referencial para el formato impreso)
-    pdf.set_font("helvetica", 'B', 10)
-    pdf.cell(w=0, h=6, text="Enlaces a Documentación de Respaldo:", new_x="LMARGIN", new_y="NEXT")
-    pdf.set_font("helvetica", '', 9)
-    pdf.cell(w=0, h=6, text="1. Tarifario FoundVision: [Insertar URL del Tarifario]", new_x="LMARGIN", new_y="NEXT")
-    pdf.cell(w=0, h=6, text="2. Tarifario Coop 29 Oct: [Insertar URL del Tarifario]", new_x="LMARGIN", new_y="NEXT")
-    pdf.cell(w=0, h=6, text="3. Calificadoras de Riesgo: [Insertar URL de Calificaciones]", new_x="LMARGIN", new_y="NEXT")
-    pdf.ln(5)
+    
 
     # Gráficas
     with tempfile.TemporaryDirectory() as tmpdir:
@@ -232,6 +225,15 @@ def crear_pdf():
             pdf.multi_cell(w=180, h=5, text=linea_limpia, new_x="LMARGIN", new_y="NEXT")
             
     return bytes(pdf.output())
+
+   pdf.set_font("helvetica", 'B', 10)
+    pdf.cell(w=0, h=6, text="Enlaces a Documentación de Respaldo:", new_x="LMARGIN", new_y="NEXT")
+    pdf.set_font("helvetica", '', 9)
+    pdf.cell(w=0, h=6, text="1. Tarifario FoundVision: https://visionfund.ec/docs/transparencia/tarifario-septiembre.pdf", new_x="LMARGIN", new_y="NEXT")
+    pdf.cell(w=0, h=6, text="2. Tarifario Coop 29 Oct: https://www.29deoctubre.fin.ec/Portals/0/Documentos/TASAS_VIGENTES_7_SEPT_2026.pdf", new_x="LMARGIN", new_y="NEXT")
+    pdf.cell(w=0, h=6, text="3. Calificadoras de Riesgo: ", new_x="LMARGIN", new_y="NEXT")
+    pdf.cell(w=0, h=6, text="3. Calificadoras de Riesgo: ", new_x="LMARGIN", new_y="NEXT")
+    pdf.ln(5)
 
 st.markdown("---")
 pdf_bytes = crear_pdf()
