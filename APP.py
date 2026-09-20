@@ -62,7 +62,7 @@ col_tabla1, col_tabla2 = st.columns(2)
 
 with col_tabla1:
     st.markdown("**Banco FoundVision**")
-    st.markdown("**Monto mínimo: USD 5.000**")
+    st.markdown("**Monto mínimo: USD 300**")
     df_show_bfv = df[['Plazo', 'Tasa_Anual_BFV', 'Rend_Nominal_BFV', 'Inflacion_Plazo', 'Rend_Real_BFV', 'Ganancia_Real_USD_BFV']].copy()
     st.dataframe(df_show_bfv.style.format({
         'Tasa_Anual_BFV': '{:.2%}', 'Rend_Nominal_BFV': '{:.3%}', 'Inflacion_Plazo': '{:.3%}', 
