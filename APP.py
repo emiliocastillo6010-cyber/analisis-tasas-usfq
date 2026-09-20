@@ -81,18 +81,40 @@ color_fv = '#003366' # Azul oscuro formal para FoundVision
 color_coop = '#B30000' # Rojo institucional para 29 de Octubre
 
 fig1 = go.Figure()
-fig1.add_trace(go.Scatter(x=df['Plazo'], y=df['Tasa_Anual_FV'], mode='lines+markers', name='Banco FoundVision', line=dict(color=color_fv, width=2)))
-fig1.add_trace(go.Scatter(x=df['Plazo'], y=df['Tasa_Anual_Coop29'], mode='lines+markers', name='Coop. 29 de Octubre', line=dict(color=color_coop, width=2)))
+fig1.add_trace(go.Scatter(
+    x=df['Plazo'], y=df['Tasa_Anual_FV'], mode='lines+markers+text', 
+    name='Banco FoundVision', line=dict(color=color_fv, width=2),
+    text=[f'{val:.2%}' for val in df['Tasa_Anual_FV']], textposition='top left'
+))
+fig1.add_trace(go.Scatter(
+    x=df['Plazo'], y=df['Tasa_Anual_Coop29'], mode='lines+markers+text', 
+    name='Coop. 29 de Octubre', line=dict(color=color_coop, width=2),
+    text=[f'{val:.2%}' for val in df['Tasa_Anual_Coop29']], textposition='bottom right'
+))
 fig1.update_layout(title='1. Curva de Tasas Nominales Anuales', template='plotly_white', xaxis_title='Plazo (días)', yaxis_tickformat='.2%')
 
 fig2 = go.Figure()
-fig2.add_trace(go.Scatter(x=df['Plazo'], y=df['Rend_Real_FV'], mode='lines+markers', name='Banco FoundVision', line=dict(color=color_fv, width=2)))
-fig2.add_trace(go.Scatter(x=df['Plazo'], y=df['Rend_Real_Coop29'], mode='lines+markers', name='Coop. 29 de Octubre', line=dict(color=color_coop, width=2)))
+fig2.add_trace(go.Scatter(
+    x=df['Plazo'], y=df['Rend_Real_FV'], mode='lines+markers+text', 
+    name='Banco FoundVision', line=dict(color=color_fv, width=2),
+    text=[f'{val:.2%}' for val in df['Rend_Real_FV']], textposition='top left'
+))
+fig2.add_trace(go.Scatter(
+    x=df['Plazo'], y=df['Rend_Real_Coop29'], mode='lines+markers+text', 
+    name='Coop. 29 de Octubre', line=dict(color=color_coop, width=2),
+    text=[f'{val:.2%}' for val in df['Rend_Real_Coop29']], textposition='bottom right'
+))
 fig2.update_layout(title='2. Rendimiento Real por Plazo (Ecuación de Fisher)', template='plotly_white', xaxis_title='Plazo (días)', yaxis_tickformat='.2%')
 
 fig3 = go.Figure()
-fig3.add_trace(go.Bar(x=df['Plazo'], y=df['Ganancia_Real_USD_FV'], name='Banco FoundVision', marker_color=color_fv))
-fig3.add_trace(go.Bar(x=df['Plazo'], y=df['Ganancia_Real_USD_Coop29'], name='Coop. 29 de Octubre', marker_color=color_coop))
+fig3.add_trace(go.Bar(
+    x=df['Plazo'], y=df['Ganancia_Real_USD_FV'], name='Banco FoundVision', marker_color=color_fv,
+    text=[f'${val:.2f}' for val in df['Ganancia_Real_USD_FV']], textposition='outside'
+))
+fig3.add_trace(go.Bar(
+    x=df['Plazo'], y=df['Ganancia_Real_USD_Coop29'], name='Coop. 29 de Octubre', marker_color=color_coop,
+    text=[f'${val:.2f}' for val in df['Ganancia_Real_USD_Coop29']], textposition='outside'
+))
 fig3.update_layout(title='3. Ganancia Real Estimada (USD 10.000)', template='plotly_white', xaxis_title='Plazo (días)', barmode='group')
 
 col1, col2 = st.columns(2)
