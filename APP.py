@@ -212,16 +212,16 @@ def crear_pdf():
         fig3_path = os.path.join(tmpdir, "fig3.png")
         
         # Guardar en blanco para PDF
-        fig1.write_image(fig1_path, width=800, height=400, scale=2)
-        fig2.write_image(fig2_path, width=800, height=400, scale=2)
-        fig3.write_image(fig3_path, width=800, height=400, scale=2)
+        fig1.write_image(fig1_path, width=700, height=300, scale=2)
+        fig2.write_image(fig2_path, width=700, height=300, scale=2)
+        fig3.write_image(fig3_path, width=700, height=300, scale=2)
         
         pdf.add_page()
-        pdf.image(fig1_path, x=15, w=170)
+        pdf.image(fig1_path, x=15, w=190)
         pdf.ln(2)
-        pdf.image(fig2_path, x=15, w=170)
+        pdf.image(fig2_path, x=15, w=190)
         pdf.add_page()
-        pdf.image(fig3_path, x=15, w=170)
+        pdf.image(fig3_path, x=15, w=190)
 
     
     pdf.ln(5)
